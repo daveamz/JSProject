@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="store">
 <head>
-<meta charset="UTF-8">
-
-<script type="text/javascript" src = "js/script.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 </head>
-<body oncontextmenu="return false;">
 
+<body>
+    <div ng-controller="StoreController as store">
+        <h1> {{store.product.name}} </h1>
+        <h2> ${{store.product.price}}</h2>
+        <p> {{store.product.description}} </p>
+        <button ng-show="store.product.canPurchase">Add to Chart</button>
+    </div>
 
-<h1 id="title1" onclick="onClick()">Click</h1>
-
-<img id="poza"></img>
-
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
